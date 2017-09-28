@@ -11,7 +11,7 @@ body {
 
 p {
   color: #252525;
-  line-height: 1.5em;
+  line-height: 1.75em;
 }
 
 h1 {
@@ -63,3 +63,111 @@ header {
 /* 
  * YOUR CSS:
  */
+header{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  position:fixed;
+  z-index:10;
+  width: 95%;
+  margin-left:2.5%;
+  margin-right:2.5%;
+  border-radius:0 0 20px 20px;
+}
+.logo{
+  padding:10px;
+  height: 40px;
+  width: 200px;
+}
+nav{
+  display:flex;
+}
+.nav-item{
+  padding:10px;
+}
+nav a{
+  color:white;
+  font-size:30px;
+  text-decoration: none;
+}
+
+ #about {
+   display:flex;
+   flex-direction: column;
+}
+
+#about div{
+  padding:20px;
+  display:flex;
+}
+
+#about p{
+  flex:3;
+}
+
+#aboutmockup{
+  flex:2;
+}
+
+#about #aboutmockup {
+  padding: 0;
+}
+
+#staff{
+  display: flex;
+  flex-direction:column;
+}
+
+#staff div{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.staff-profile{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis: calc(33% - 100px);
+  align-items:top;
+  padding:50px;
+  text-align:center;
+}
+.staff-name{
+  font-size: 30px;
+  text-align: center;
+}
+.staff-bio{
+  font-style:italic;
+}
+.em{
+  margin-left: calc(50% - 32.5px);
+  height: 75px;
+  width: 75px;
+}
+
+@media (max-width: 800px){
+  .staff-profile{
+    flex-basis: calc(50% - 100px);
+  }
+}
+
+@media (max-width: 500px){
+  .staff-profile{
+    flex-basis: calc(100% - 100px);
+  }
+  header{
+    flex-direction: column;
+  }
+  nav a{
+    font-size:20px;
+  }
+  #about p{
+    flex:1;
+    margin-bottom: 0;
+  }
+  
+  #aboutmockup{
+    height: 0;
+    flex:0;
+  }
+}
