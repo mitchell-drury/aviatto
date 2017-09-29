@@ -73,7 +73,10 @@ header{
   margin-left:2.5%;
   margin-right:2.5%;
   border-radius:0 0 20px 20px;
+  transform: translateY(-4.5em);
+  transition: transform .5s ease;
 }
+
 .logo{
   padding:10px;
   height: 40px;
@@ -89,6 +92,13 @@ nav a{
   color:white;
   font-size:30px;
   text-decoration: none;
+  transition: all .25s;
+  border-radius:10%;
+  padding:6px;
+}
+nav a:hover{
+  background-color:white;
+  color: #202b47;
 }
 
  #about {
@@ -131,11 +141,19 @@ nav a{
   align-items:top;
   padding:50px;
   text-align:center;
+  transition: all .25s;
 }
-.staff-name{
-  font-size: 30px;
-  text-align: center;
+.staff-profile > h3 {
+  font-size:1.5em;
+  transition: color .25s;
 }
+.staff-profile:hover{
+  background-color:#f39c12;
+}
+.staff-profile:hover > h3{
+  color:white;
+}
+
 .staff-bio{
   font-style:italic;
 }
